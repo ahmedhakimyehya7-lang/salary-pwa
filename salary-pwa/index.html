@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حاسبة الرواتب العراقية</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1565c0">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>حاسبة الرواتب العراقية</h1>
+
+        <div class="card">
+
+            <label>الدرجة الوظيفية</label>
+            <select id="grade">
+                <option value="">اختر الدرجة</option>
+            </select>
+
+            <label>المرحلة</label>
+            <select id="stage">
+                <option value="">اختر المرحلة</option>
+            </select>
+
+            <label>الشهادة</label>
+            <select id="certificate">
+                <option>إعدادية</option>
+                <option>دبلوم</option>
+                <option>بكالوريوس</option>
+                <option>دبلوم عالي</option>
+                <option>ماجستير</option>
+                <option>دكتوراه</option>
+            </select>
+
+            <label>نسبة الخطورة (%)</label>
+            <input type="number" id="risk" value="0">
+
+            <label>الحالة الزوجية</label>
+            <select id="marital">
+                <option>أعزب</option>
+                <option>متزوج</option>
+            </select>
+
+            <label>عدد الأطفال</label>
+            <input type="number" id="children" value="0">
+
+            <button id="calculate">
+             إعادة الحساب
+            </button>
+
+      <div class="card">
+
+    <h2>النتائج</h2>
+
+    <div class="result-item">
+        <span>💰 الراتب الاسمي</span>
+        <strong id="basic">0</strong>
+    </div>
+
+    <div class="result-item">
+        <span>🎓 مخصصات الشهادة</span>
+        <strong id="certificateAllowance">0</strong>
+    </div>
+
+    <div class="result-item">
+        <span>⚠️ مخصصات الخطورة</span>
+        <strong id="riskAllowance">0</strong>
+    </div>
+
+    <div class="result-item">
+        <span>👨‍👩‍👧‍👦 مخصصات الزوجية</span>
+        <strong id="maritalAllowance">0</strong>
+    </div>
+
+    <div class="result-item">
+        <span>👶 مخصصات الأطفال</span>
+        <strong id="childrenAllowance">0</strong>
+    </div>
+
+    <div class="result-item">
+        <span>🏦 استقطاع التقاعد</span>
+        <strong id="retirementDeduction">0</strong>
+    </div>
+
+    <div class="result-total">
+        <span>💵 صافي الراتب</span>
+        <strong id="totalSalary">0</strong>
+    </div>
+
+</div>
+
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="data/salaries.js"></script>
+    <script src="js/calculator.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
